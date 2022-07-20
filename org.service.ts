@@ -63,7 +63,7 @@ export class OrgService {
   }
 
   async findAll(): Promise<Org[]> {
-    return await this.orgRepository.findAll();
+    return await this.orgRepository.findAll({fields: ["id","name"]});
   }
 
   async findOne(id: string): Promise<Org> {
